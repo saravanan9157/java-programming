@@ -1,0 +1,18 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+      Scanner scanner = new Scanner(System.in);
+        String inputString = scanner.next();
+    
+        System.out.println("May I know how to learn " +inputString+ "!!!...");
+        scanner.close();
+    }
+}
+
