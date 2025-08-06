@@ -1,0 +1,52 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class Calculator {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        
+        int num1 = sc.nextInt();
+        int num2 = sc.nextInt();
+        char operator = sc.next().charAt(0);
+
+        double result;
+        switch (operator) {
+            case '+':
+                result = num1 + num2;
+                System.out.println("Addition of two number is " + result);
+                break;
+            case '-':
+                result = num1 - num2;
+                System.out.println("Subtraction of two number is " + result);
+                break;
+            case '*':
+                result = num1 * num2;
+                System.out.println("Multiplication of two number is " + result);
+                break;
+            case '/':
+                if (num2 == 0) {
+                    System.out.println("Division by zero is not allowed");
+                } else {
+                    result = (double) num1 / num2;
+                    System.out.println("Division of two number is " + result);
+                }
+                break;
+            case '%':
+                if (num2 == 0) {
+                    System.out.println("Modulo by zero is not allowed");
+                } else {
+                    result = num1 % num2;
+                    System.out.println("Modulo of two number is " + result);
+                }
+                break;
+            default:
+                System.out.println("Invalid Input");
+        }
+    }
+}
