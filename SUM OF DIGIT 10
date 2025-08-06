@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class SumOfDigits {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int num = sc.nextInt();
+        int temp = num;
+        
+        
+        int digitCount = 0;
+        while (temp != 0) {
+            temp /= 10;
+            digitCount++;
+        }
+        
+        if (digitCount <= 2) {
+            System.out.println("Invalid Input");
+        } else {
+            int sum = 0;
+            temp = num;
+            while (temp != 0) {
+                sum += temp % 10;
+                temp /= 10;
+            }
+            System.out.println("Sum of digit is " + sum);
+        }
+        
+        sc.close();
+    }
+}
