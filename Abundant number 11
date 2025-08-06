@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class AbundantNumberChecker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int num = sc.nextInt();
+        int sumOfDivisors = 0;
+        
+      
+        for (int i = 1; i <= num / 2; i++) {
+            if (num % i == 0) {
+                sumOfDivisors += i;
+            }
+        }
+        
+        
+        if (sumOfDivisors > num) {
+            System.out.println("Abundant Number");
+        } else {
+            System.out.println("Not Abundant Number");
+        }
+        
+        sc.close();
+    }
+}
