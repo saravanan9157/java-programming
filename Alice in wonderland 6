@@ -1,0 +1,25 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class AliceRoute {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int number = sc.nextInt();
+        
+        
+        System.out.println("Bird said:" + number);
+        
+        
+        int sum = (number / 10) + (number % 10);
+        
+        
+        System.out.println("Alice must go in path-" + sum);
+        
+        sc.close();
+    }
+}
