@@ -1,0 +1,32 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class HarshadNumberChecker {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        int num = sc.nextInt();
+        int sumOfDigits = 0;
+        int temp = num;
+        
+        
+        while (temp > 0) {
+            sumOfDigits += temp % 10;
+            temp /= 10;
+        }
+        
+        
+        if (num % sumOfDigits == 0) {
+            System.out.println("Harshad Number");
+        } else {
+            System.out.println("Not Harshad Number");
+        }
+        
+        sc.close();
+    }
+}
