@@ -1,0 +1,41 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.Scanner;
+import java.util.Scanner;
+
+public class ReverseNumber {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+
+        long n = 0;
+        if (scanner.hasNextLong()) {
+            n = scanner.nextLong();
+        } else {
+            System.out.println("Invalid Input");
+            scanner.close();
+            return;
+        }
+
+        
+        if (n <= 0 || n > 1000000000) {
+            System.out.println("Invalid Input");
+            scanner.close();
+            return;
+        }
+
+        
+        long reversed = 0;
+        while (n > 0) {
+            int digit = (int)(n % 10);
+            reversed = reversed * 10 + digit;
+            n /= 10;
+        }
+
+       
+        System.out.println(reversed);
+        scanner.close();
+    }
+}
