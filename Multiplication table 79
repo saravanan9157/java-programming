@@ -1,0 +1,26 @@
+import java.io.*;
+import java.util.*;
+import java.text.*;
+import java.math.*;
+import java.util.regex.*;
+
+import java.util.Scanner;
+
+public class MultiplicationTable {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        int n = scanner.nextInt();
+
+        
+        if (n < 1 || n > 9) {
+            System.out.println("Invalid Input");
+        } else {
+            for (int i = 1; i <= n; i++) {
+                System.out.println(n + " x " + i + " = " + (n * i));
+            }
+        }
+
+        scanner.close();
+    }
+}
